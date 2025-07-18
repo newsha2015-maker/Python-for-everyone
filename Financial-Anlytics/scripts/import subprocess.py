@@ -57,4 +57,50 @@ def get_contacts_from_mac():
     contacts = []
     contact_entries = output.split("}, {")
     for entry in contact_entries:
-        entry = entry.replace("{
+        print (f"Processing entry: {entry}")
+        parts = entry.split(", ")
+        if len(parts) < 4:
+            print(f"Skipping incomplete entry: {entry}")
+            continue
+        first_name = parts[0].split(": ")[1].strip("'")
+        last_name = parts[1].split(": ")[1].strip("'")
+        phones = [part.split(": ")[1].strip("'") for part in parts[2].split("}, {")]
+        emails = [part.split(": ")[1].strip("'") for part in parts[3].split("}, {")]
+        contacts.append({
+            "First Name": first_name,
+            "Last Name": last_name,
+            "Phones": phones,
+            "Emails": emails
+        })
+    return contacts
+# Example usage 
+contacts = get_contacts_from_mac()
+print(contacts)
+# Save contacts to a CSV file
+if contacts:   
+    csv_file = 'contacts.csv'
+    with open(csv_file, 'w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=["First Name", "Last Name", "Phones", "Emails"])
+        writer.writeheader()
+        for contact in contacts:
+            writer.writerow(contact)
+    print(f"Contacts saved to {csv_file}")
+# Save contacts to an Excel file
+    excel_file = 'contacts.xlsx'
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    sheet.title = "Contacts"
+    # Write header
+    sheet.append(["First Name", "Last Name", "Phones", "Emails"])   
+    # Write data
+    for contact in contacts:
+        sheet.append([
+            contact["First Name"],
+            contact["Last Name"],
+            ", ".join(contact["Phones"]),
+            ", ".join(contact["Emails"])
+        ])
+    workbook.save(excel_file)
+    print(f"Contacts saved to {excel_file}")
+else:
+    print("No contacts found.")
