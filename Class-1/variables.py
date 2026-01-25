@@ -9,8 +9,10 @@ This module demonstrates fundamental Python concepts including:
 - Complex number operations
 
 Author: Avnit
-Date: 2024
+Date: 2026
 """
+b = 5.3
+print(type(b))
 
 # Example 1: Basic variable assignment and type checking
 print("=== Example 1: Variable Assignment and Type Checking ===")
