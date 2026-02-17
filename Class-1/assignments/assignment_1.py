@@ -6,9 +6,10 @@ Assignment 1: Variables and Data Types
 3.  Create a variable `favorite_color` and assign it your favorite color.
 4.  Print a sentence that includes all three variables, like "My name is [name], I am [age] years old, and my favorite color is [favorite_color]."
 """
+print("\n == Assignment 1: Variable and Data Types ==")
 
-user_name = "Newsha" 
-age = 46
-favorite_color = "militrary green"
+user_name = "Newsha"                       # Creating a variable name
+age = 46                                   # Creating a variable age
+favorite_color = "militrary green"         # Creating a variable favoriate_color
 
 print(f" My name is {user_name}. I am {age} years old, and my favoriate color is {favorite_color}.")
