@@ -70,8 +70,19 @@ print(f"float {float_num} convert to string: '{str_float}', Type: {type(str_floa
 
 # Example 9: Variable naming conventions
 print("\n=== Example 9: Variable Naming Conventions ===")
-user_nam = 
+user_name= "John"
+age = 25
+is_student = True
+PI = 3.14159 # Constants in uppercase
+
+print(f"User: {user_name}, Age:{age}, Student: {is_student}, PI: {PI} ")
 
 # Example 10: Multiple assignment
+print("\n== Example 10: Multiple Assigment ==")
+x, y, z = 1, 2, 3
+print(f" x = {x}, y = {y}, z = {z}")
 
 # Tuple unpacking
+coordinates = (10, 20, 30)
+x_coord, y_coord, z_coord = coordinates
+print(f" Coordinates: X = {x_coord}, y = {y_coord}, z = {z_coord}")

@@ -68,40 +68,43 @@ def demonstrate_lists():
     print("\n5. List Operations:")
     
     # Addition (concatenation)
-    numbers2 = [1, 2, 3]
+    numbers2 = [2,4,6]
     combined = numbers + numbers2
-    print(f"   Addition: {numbers} + {numbers2} = {combined}")
-    
+    print(f" Addition: {numbers} + {numbers2} = {combined}")
+
     # Multiplication (repetition)
     repeated = numbers * 2
-    print(f"   Multiplication: {numbers} * 2 = {repeated}")
-    print(f"   Length of repeated list: {len(repeated)}")
+    print(f" Multiplication: {numbers} * 2 = {repeated}")
+    print(f" Length of repeated list: {len(repeated)}")
     
     # List methods
     print("\n6. List Methods:")
     
     # append() - add element to end
     repeated.append(1)
-    print(f"   After append(1): {repeated}")
-    
-    # count() - count occurrences
+    print(f" After append(1): {repeated}")
+
+    # count() - count occurrences 
     count_10 = repeated.count(10)
-    print(f"   Count of 10: {count_10}")
-    
+    print(f" count of 10: {count_10}")
+    count_13 = repeated.count(13)
+    print(f" count of 13: {count_13}")
+    count_1 =repeated.count(1)
+    print(f" count of 1: {count_1}")
+
     # sort() - sort in ascending order
     repeated.sort()
-    print(f"   After sort(): {repeated}")
+    print(f" After sort(): {repeated}")
     
     # reverse() - reverse the order
     repeated.reverse()
-    print(f"   After reverse(): {repeated}")
+    print(f" After reverse(): {repeated}")
     
     # Built-in functions
-    print("\n7. Built-in Functions:")
-    print(f"   Maximum value: {max(repeated)}")
-    print(f"   Minimum value: {min(repeated)}")
-    print(f"   Length: {len(repeated)}")
-
+    print("\n7. Built-in Function:")
+    print(f"  Maximum value: {max (repeated)}")
+    print(f"  Minimum Value: {min(repeated)}")
+    print(f" Length: {len(repeated)}")
 
 def demonstrate_tuples():
     """
@@ -116,52 +119,52 @@ def demonstrate_tuples():
     print("\n=== TUPLE DEMONSTRATION ===")
     
     # Creating tuples
-    tpl = (10, 20, 30, 40)  # Tuple of integers
-    mixed_tuple = ("John", 25, 3.14, True)  # Mixed data types
+    tpl = (10, 20, 30, 40) #Tuple of integers
+    mixed_tuple = ("John", 25, 3.14, True) #Mixed dat Types
     
     print("1. Tuple Creation:")
-    print(f"   Integer tuple: {tpl}")
-    print(f"   Mixed tuple: {mixed_tuple}")
-    
+    print(f" Integer tuple{tpl}")
+    print(f"  Mixed tuple: {mixed_tuple}")
+
     # Accessing elements (same as lists)
     print("\n2. Accessing Elements:")
-    print(f"   First element: {tpl[0]}")
-    print(f"   Last element: {tpl[-1]}")  # Negative indexing
-    print(f"   Slice: {tpl[1:3]}")  # Elements 1 and 2
+    print(f" First element: {tpl[0]}")
+    print(f" Last element: {tpl[-1]}") # Negitave indexing
+    print(f" Slice: {tpl[1:3]}") # Element 1 and 2
     
     # Demonstrating immutability
-    print("\n3. Immutability (cannot change):")
-    print(f"   Original tuple: {tpl}")
-    print("   Trying to modify tuple[0] = 99 would cause an error!")
-    print("   Tuples are immutable - they cannot be changed after creation")
+    print("\n3. Immutability(cananot change):")
+    print(f" Originatl tuple {tpl}")
+    print(" Trying to modifty tuple[0] =99 would cause an erro!")
+    print(" Tuples are immutable - they cannot be changed afer creation")
     
     # Tuple operations (similar to lists)
     print("\n4. Tuple Operations:")
     tpl2 = (50, 60)
     combined = tpl + tpl2
-    print(f"   Addition: {tpl} + {tpl2} = {combined}")
-    
-    repeated = tpl * 2
-    print(f"   Multiplication: {tpl} * 2 = {repeated}")
-    
+    print(f" Addition: {tpl} + {tpl2} = {combined}")
+
+    reeated = tpl * 2
+    print(f" Multiplication: {tpl} * 2 = {reeated}")
+
     # Built-in functions work with tuples
-    print("\n5. Built-in Functions:")
+    print("\n5. Built-in Function:")
     print(f"   Maximum: {max(tpl)}")
     print(f"   Minimum: {min(tpl)}")
     print(f"   Length: {len(tpl)}")
-    print(f"   Sum: {sum(tpl)}")
-    
+    print(f"   Sum: sum{(tpl)}")
+
     # Tuple unpacking
     print("\n6. Tuple Unpacking:")
     x, y, z, w = tpl
-    print(f"   Unpacked values: x={x}, y={y}, z={z}, w={w}")
+    print(f" Unpacked Values: x = {x}, y ={y}, z ={z}, w ={w}")
     
     # Common use cases for tuples
     print("\n7. Common Use Cases:")
-    coordinates = (3, 4)  # x, y coordinates
-    rgb_color = (255, 128, 0)  # Red, Green, Blue values
-    print(f"   Coordinates: {coordinates}")
-    print(f"   RGB Color: {rgb_color}")
+    Coordinates  = (3,4) # x, y Coordinates
+    rgb_color = (255, 128, 0) #Red, Green, Blue values
+    print(f" Coordinates: {Coordinates}")
+    print(f" RGB Color: {rgb_color}")
 
 
 def demonstrate_dictionaries():
@@ -180,60 +183,47 @@ def demonstrate_dictionaries():
     # Creating dictionaries
     person1 = {"Name": "John", "Age": "21", "Gender": "Male"}
     person2 = {"Name": "John2", "Age": "31", "Gender": "Male"}
-    
+
     print("1. Dictionary Creation:")
-    print(f"   Person 1: {person1}")
-    print(f"   Person 2: {person2}")
+    print(f" Person 1: {person1}")
+    print(f" Person 2: {person2}")
     
     # Accessing values by key
     print("\n2. Accessing Values:")
-    print(f"   Person 1 name: {person1['Name']}")
-    print(f"   Person 2 name: {person2['Name']}")
-    print(f"   Person 1 age: {person1['Age']}")
-    
+    print(f" Person 1 name: {person1['Name']}")
+    print(f" Person 2 name: {person2['Name']}")
+    print(f" Person 1 age: {person1['Age']}")
+
     # Adding and modifying entries
     print("\n3. Modifying Dictionaries:")
-    person1["City"] = "New York"  # Add new key-value pair
-    print(f"   After adding city: {person1}")
-    
-    person1["Age"] = "22"  # Modify existing value
-    print(f"   After updating age: {person1}")
-    
+    person1["City"] = "New York" #Add new Key-value pair
+    print(f" After adding city: {person1}")
+  
     # Dictionary methods
-    print("\n4. Dictionary Methods:")
+    print("\n. Dictionary Methods:")
     
     # keys() - get all keys
     keys = person1.keys()
-    print(f"   Keys: {list(keys)}")
+    print(f"   Keys: {list[keys]}")
     
     # values() - get all values
     values = person1.values()
     print(f"   Values: {list(values)}")
-    
+
     # items() - get key-value pairs
     items = person1.items()
     print(f"   Items: {list(items)}")
     
     # get() - safe access with default value
-    print(f"   Age: {person1.get('Age', 'Unknown')}")
-    print(f"   Phone: {person1.get('Phone', 'Not provided')}")
+    print(f"  Age: {person1.get('Age', 'Unknown')}")
+    print(f"  Phone: {person1.get('phone', 'Not Provided')}")
     
     # Built-in functions
-    print("\n5. Built-in Functions:")
-    print(f"   Length: {len(person1)}")
-    print(f"   Keys: {list(person1.keys())}")
-    print(f"   Values: {list(person1.values())}")
+   
     
     # Nested dictionaries
-    print("\n6. Nested Dictionaries:")
-    student = {
-        "name": "Alice",
-        "grades": {"Math": 95, "Science": 88, "English": 92},
-        "contact": {"email": "alice@email.com", "phone": "555-1234"}
-    }
-    print(f"   Student: {student}")
-    print(f"   Math grade: {student['grades']['Math']}")
-    print(f"   Email: {student['contact']['email']}")
+   
+
 
 def demonstrate_sequence_comparisons():
     """
