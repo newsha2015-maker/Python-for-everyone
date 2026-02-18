@@ -20,8 +20,8 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] # Create a list from 1 to 10
 for numbers in numbers:
     print(numbers)
 
-while count < 9:
-    count = (numbers[])
+while count[numbers] < 9:        # What is going here??? 
+    count = 0
     squred_number = numbers ** 2   # while loop
     print(squred_number)
     count = count + 1
